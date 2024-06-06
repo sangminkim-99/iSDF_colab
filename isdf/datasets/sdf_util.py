@@ -6,7 +6,7 @@
 import numpy as np
 import json
 import os
-import trimesh
+# import trimesh
 import matplotlib as mpl
 from matplotlib import cm
 from matplotlib.colors import ListedColormap
