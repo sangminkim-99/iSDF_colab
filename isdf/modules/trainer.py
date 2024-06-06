@@ -25,9 +25,10 @@ from isdf.datasets.data_util import FrameData
 from isdf.modules import (
     fc_map, embedding, render, sample, loss
 )
-from isdf import geometry, visualisation
+# from isdf import geometry, visualisation
+from isdf import geometry
 from isdf.eval import metrics, eval_pts
-from isdf.visualisation import draw, draw3D
+# from isdf.visualisation import draw, draw3D
 from isdf.eval.metrics import start_timing, end_timing
 
 
@@ -1492,10 +1493,10 @@ class Trainer():
         sdf_grid_pc, _ = self.get_sdf_grid_pc(include_gt=False)
         sdf_grid_pc = np.transpose(sdf_grid_pc, (2, 1, 0, 3))
         # sdf_grid_pc = sdf_grid_pc[:, :, ::-1]  # for replica
-        visualisation.sdf_viewer.SDFViewer(
-            scene=scene, sdf_grid_pc=sdf_grid_pc,
-            colormap=True, surface_cutoff=0.01
-        )
+        # visualisation.sdf_viewer.SDFViewer(
+        #     scene=scene, sdf_grid_pc=sdf_grid_pc,
+        #     colormap=True, surface_cutoff=0.01
+        # )
 
     def mesh_rec(self, crop_mesh_with_pc=True):
         """
@@ -1699,9 +1700,9 @@ class Trainer():
                                 traj_td[j + 1][::-1],
                                 [1., 0., 0.], 2)
                             im = (im * 255).astype(np.uint8)
-                for (p, ang) in zip(cam_td, angs):
-                    draw.draw_agent(
-                        im, p, agent_rotation=ang, agent_radius_px=12)
+                # for (p, ang) in zip(cam_td, angs):
+                #     draw.draw_agent(
+                #         im, p, agent_rotation=ang, agent_radius_px=12)
                 slices["pred_sdf"][i] = im
 
         return slices
