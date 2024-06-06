@@ -7,7 +7,7 @@ import numpy as np
 import os
 import trimesh
 import trimesh.viewer
-import pyglet
+# import pyglet
 import threading
 import matplotlib.pylab as plt
 import torch
