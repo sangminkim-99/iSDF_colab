@@ -7,7 +7,7 @@ import numpy as np
 import trimesh
 import torch
 
-from isdf import visualisation
+# from isdf import visualisation
 from isdf.geometry import transform
 from isdf.modules import sample
 
