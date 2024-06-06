@@ -9,7 +9,7 @@ import json
 import os
 import glob
 from scipy.spatial.transform import Rotation as R
-from urdfpy import URDF
+# from urdfpy import URDF
 
 from isdf.datasets import sdf_util
 
