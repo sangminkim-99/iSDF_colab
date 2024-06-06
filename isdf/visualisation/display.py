@@ -7,7 +7,7 @@ import math
 import types
 
 import numpy as np
-import pyglet
+# import pyglet
 import trimesh
 import trimesh.transformations as tf
 import trimesh.viewer
